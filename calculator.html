@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Meal Hisab</title>
+</head>
+
+<body class="">
+
+    <h2 class="text-3xl font-bold text-center mt-12">Meal <span class="text-pink-600">Hisab</span></h2>
+    <h2 class="text-md  text-center">Develop by Maruf Hossain Munna</h2>
+
+    <div class="w-72 lg:mx-auto my-10 text-xl font-bold grid gap-4 mx-2">
+        <div class="flex justify-between">
+            <label for="rate"> Meal Rate :</label>
+            <input class="border-2 border-black w-32 rounded-md" type="number" id="rate">
+        </div>
+        <div class="flex justify-between">
+            <label for="meal">His Meal :</label>
+            <input class="border-2 border-black w-32 rounded-md" type="number" id="meal">
+        </div>
+        <div class="flex justify-between">
+            <label class="" for="deposit">Total Deposit :</label>
+            <input class="border-2 border-black w-32 rounded-md" type="number" id="deposit">
+        </div>
+
+        <button class="w-full bg-pink-500 py-2 rounded-xl hover:bg-black hover:text-white" onclick="calculate()">Calculate</button>
+
+        <p > <span id="result"></span>  </p>
+    </div>
+
+</body>
+
+<script>
+    function calculate() {
+        var rate = parseFloat(document.getElementById("rate").value);
+        var meal = parseFloat(document.getElementById("meal").value);
+        var deposit = parseFloat(document.getElementById("deposit").value);
+        var result = deposit - (rate * meal);
+        document.getElementById("result").innerHTML = "Remeining Amount : " + result;
+    }
+
+</script>
+
+</html>
