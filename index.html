@@ -30,7 +30,7 @@
 
         <button class="w-full bg-pink-500 py-2 rounded-xl hover:bg-black hover:text-white" onclick="calculate()">Calculate</button>
 
-        <p > <span id="result"></span>  </p>
+        <p > <span id="result"></span> </p>
     </div>
 
 </body>
@@ -41,7 +41,7 @@
         var meal = parseFloat(document.getElementById("meal").value);
         var deposit = parseFloat(document.getElementById("deposit").value);
         var result = deposit - (rate * meal);
-        document.getElementById("result").innerHTML = "Remeining Amount : " + result;
+        document.getElementById("result").innerHTML = "Remeining Amount : " + result + " TK";
     }
 
 </script>
